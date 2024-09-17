@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8 Queens Problem</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>8 Queens Problem</h1>
+
+    <!-- Chessboard container -->
+    <div id="chessboard" class="chessboard"></div>
+
+    <!-- Buttons -->
+    <div class="controls">
+      <button onclick="solveStep()">Solve</button>
+      <!-- Shows the full solution -->
+      <button onclick="nextStep()">Next</button>
+      <!-- Step-by-step queen placement -->
+      <button onclick="restart()">Restart</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

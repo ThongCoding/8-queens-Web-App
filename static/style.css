@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.chessboard {
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid black;  /* Optional: This is the outer border of the board */
+}
+
+.row {
+    display: flex;  /* Ensure rows are treated as flex containers */
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    border: 0;  /* Remove border between cells */
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's width/height */
+    margin: 0;  /* Ensure there is no margin between cells */
+    padding: 0;  /* Ensure there is no padding between cells */
+}
+
+/* Chessboard color pattern */
+.cell:nth-child(odd) {
+    background-color: #D2B48C;  /* Light beige (similar to tan) */
+}
+
+.cell:nth-child(even) {
+    background-color: #8B4513;  /* Dark brown */
+}
+
+.row:nth-child(even) .cell:nth-child(odd) {
+    background-color: #8B4513;  /* Dark brown */
+}
+
+.row:nth-child(even) .cell:nth-child(even) {
+    background-color: #D2B48C;  /* Light beige */
+}
+
+.queen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Ensures the SVG scales properly within the cell */
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}

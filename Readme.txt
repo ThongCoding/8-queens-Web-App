@@ -1,0 +1,1 @@
+when activate the virtual environment: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
